@@ -82,7 +82,7 @@ namespace Reminiscence.Arrays
             }
             set
             {
-                long block = (long)System.Math.Floor(idx / _blockSize);
+                long block = Convert.ToInt64(Math.Floor(Convert.ToSingle(idx) / Convert.ToSingle(_blockSize)));
                 long localIdx = idx % _blockSize;
                 blocks[block][localIdx] = value;
             }
